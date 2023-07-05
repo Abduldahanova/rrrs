@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import useLocalStorage from '../../hooks/use-localstorage';
 import i18n from '../../i18n';
 
+import { NavLink } from "react-router-dom";
+
 import Clock from "../clock/Clock";
 
 export default function Header() {
@@ -42,15 +44,18 @@ export default function Header() {
                 <p>0300 300 <br/> 0334 444</p>
             </div>
             <div className={H.qrcode}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" viewBox="0 0 24 24">
-                <path fill="white" d="M1 1h10v10H1V1zm2 2v6h6V3H3z" />
-                <path fill="white" fillRule="evenodd" d="M5 5h2v2H5z" />
-                <path fill="white" d="M13 1h10v10H13V1zm2 2v6h6V3h-6z" />
-                <path fill="white" fillRule="evenodd" d="M17 5h2v2h-2z" />
-                <path fill="white" d="M1 13h10v10H1V13zm2 2v6h6v-6H3z" />
-                <path fill="white" fillRule="evenodd" d="M5 17h2v2H5z" />
-                <path fill="white" d="M23 19h-4v4h-6V13h1h-1v6h2v2h2v-6h-2v-2h-1h3v2h2v2h2v-4h2v6zm0 2v2h-2v-2h2z" />
-                </svg>
+                <NavLink to={`/Qrcode`}>  
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" viewBox="0 0 24 24">
+                  <path fill="white" d="M1 1h10v10H1V1zm2 2v6h6V3H3z" />
+                  <path fill="white" fillRule="evenodd" d="M5 5h2v2H5z" />
+                  <path fill="white" d="M13 1h10v10H13V1zm2 2v6h6V3h-6z" />
+                  <path fill="white" fillRule="evenodd" d="M17 5h2v2h-2z" />
+                  <path fill="white" d="M1 13h10v10H1V13zm2 2v6h6v-6H3z" />
+                  <path fill="white" fillRule="evenodd" d="M5 17h2v2H5z" />
+                  <path fill="white" d="M23 19h-4v4h-6V13h1h-1v6h2v2h2v-6h-2v-2h-1h3v2h2v2h2v-4h2v6zm0 2v2h-2v-2h2z" />
+                  </svg>
+                </NavLink>
+              
                 <p>QR электронной <br/> очереди</p>
             </div>
             <div className={H.buttons}>
@@ -65,10 +70,7 @@ export default function Header() {
           < Clock/>
         </div>
 
-        <div className={H.lupa}>
-        <img src={lupa} alt="" />
-        <p>Поиск</p>
-        </div>
+       
   
       </div>
     </header>

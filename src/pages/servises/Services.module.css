@@ -1,0 +1,61 @@
+.main {
+  display: flex;
+  justify-content: center;  
+}
+
+.category {
+  position: relative;
+  }
+.category h1 {
+  text-align: center;
+}
+.button {
+  position: absolute;
+  bottom: -50px;
+  left: -420px;
+  width: 288px;
+  height: 48px;
+  border-radius: 30px;
+  border: 1px solid var(--unnamed, #004DA8);
+  background: var(--unnamed, #FFF);
+  color: var(--unnamed, #004DA8);
+  text-align: center;
+  font-size: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+  
+.serviceItem {
+  width: 300px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 10px 0 0 0;
+  background: linear-gradient(
+    40deg,
+    rgba(255, 255, 255, 0.70) 0%,
+    rgba(255, 255, 255, 0.39) 50%,
+    rgba(255, 255, 255, 0.00) 100%
+  ),
+  linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.70) 0%,
+    rgba(255, 255, 255, 0.39) 50%,
+    rgba(255, 255, 255, 0.00) 100%
+  );
+  box-shadow: 0px 0px 18px 0px rgba(16, 83, 163, 0.12);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  list-style-type: none; 
+  color: black;
+}
+.serviceItem:hover {
+  color: black;
+} 
+.navLink {
+  text-decoration: none;
+}
